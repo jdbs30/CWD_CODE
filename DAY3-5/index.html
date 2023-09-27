@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,700&family=UnifrakturMaguntia&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Document</title>
+</head>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+    }
+
+    body,
+    .body {
+        background-color: #fafafa;
+    }
+
+    body {
+        overflow-y: visible;
+    }
+
+    .heading {
+        font-family: 'Titillium Web';
+        font-size: 50px;
+        font-weight: bold;
+        margin-left: 0;
+        display: flex;
+        padding: 1% 0 1% 0;
+        position: -webkit-sticky;
+    }
+
+    .header {
+        background-color: #212121;
+    }
+
+    .header2 {
+        width: 100%;
+        height: 1%;
+        background-color: #ff8a80;
+    }
+
+    .right-heading {
+        font-weight: 200;
+        font-size: 30px;
+    }
+
+    .whole-body {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .body {
+        display: flex;
+        width: 83%;
+        height: 80vh;
+        gap: 20px;
+    }
+
+    .headline {
+        margin-top: -5%;
+        margin-left: -20%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-weight: 600;
+    }
+
+    .headline-foot {
+        font-weight: 300;
+        padding: 0 1%;
+        padding-top: 1.2%;
+    }
+
+    .headline-text {
+        margin: 0 0 0 0;
+        font-family: 'Titillium Web';
+        font-weight: 700;
+        padding-left: 2%;
+        background-color: #b71c1c;
+
+    }
+
+    .news-larger {
+        flex-grow: 5;
+    }
+
+    .news-smaller {
+        width: .5%;
+        flex-grow: 2;
+        background-color: #212121;
+        word-wrap: break-word;
+        overflow-y: scroll;
+    }
+
+    .slider,
+    .image-container {
+        height: 700px;
+        padding: 0 0.5% 0 0.5%;
+    }
+
+    .image-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: .5%;
+        width: 99%;
+        height: 100%;
+        background-color: rgba(100, 100, 100, 0.5);
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .image-container:hover::before {
+        opacity: 1;
+    }
+
+    .upper_text {
+        position: sticky;
+    }
+
+    .image-container:hover::before {
+        opacity: 0;
+    }
+
+    .full-news {
+        padding: 2% 0% 0 0%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        flex-grow: 1;
+        justify-content: center;
+        /* Horizontally center the container */
+        align-items: center;
+        background-color: #f5f5f5;
+    }
+
+    .full-headline {
+        text-align: left;
+        font-family: 'Titillium Web';
+        font-weight: 700;
+        margin: auto;
+        padding-left: 5%;
+    }
+
+    .materialboxed {
+        margin-top: 1%;
+    }
+
+    .news-text {
+        flex-wrap: wrap;
+        font-family: 'Titillium Web';
+        margin-left: 2%;
+        width: 90%;
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    iframe {
+        align-self: center;
+        margin-left: 25%;
+    }
+
+    .footer_ina {
+        height: 3vh;
+        background-color: #212121;
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .news-logo {
+        height: 1%;
+        width: 1%;
+    }
+
+    nav {
+        background-color: #212121;
+        text-wrap: nowrap;
+    }
+
+    .news-logo {
+        font-family: 'Rubik';
+        font-size: 35px;
+        font-weight: 700;
+    }
+
+    .nav_text,
+    .waves-effect {
+        font-family: 'Rubik' sans-serif;
+        font-size: 16px;
+    }
+
+
+    .nav-content {
+        padding-bottom: 5%;
+    }
+
+    .divide {
+        height: 1%;
+        background-color: #212121;
+    }
+
+    .lnav {
+        font-family: 'Rubik' sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .sidenav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidenav-head {
+        font-family: 'Titillium Web';
+        font-weight: 700;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .inside-sidebar {
+        display: flex;
+        flex-direction: column;
+        background-color: #f5f5f5;
+        margin-bottom: 2%;
+        padding-bottom: 2%;
+        border-bottom: #212121 5px solid;
+    }
+    .btn-floating{
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+    }
+    .btn-floating img{
+        filter: invert(100%);
+        height: 20px;
+        width: 20px;
+    }
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="navbar-wrapper">
+                <ul>
+                    <li><img src="images/LOGO.png" class="sidenav-trigger" data-target="sidenav-test"
+                            style="height: 70px; width:70px" alt=""></a></li>
+                    <li class="logo"><a href="#" class="news-logo">JDD NEWS</a></li>
+                    <li class="logo"><a href="#" class="">September 19, 2023</a></li>
+                </ul>
+
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <form>
+                            <div class="input-field right" style="margin-top: 6%;">
+                                <input id="search" type="search" required class="">
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a href="" class="nav_text">LOCAL</a></li>
+                    <li><a href="" class="nav_text">NATIONAL</a></li>
+                    <li><a href="" class="nav_text">SPORTS</a></li>
+                    <li><a href="" class="nav_text">Download Paper Today</a></li>
+                    <li><a href="" class=" waves-dark blue darken-2 dropdown-trigger btn"
+                            style="margin-bottom:2.5%; width: 7vw; font-weight: 600; z-index: 9999;"
+                            data-target="dropdown-apps">GET APP</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <ul class="sidenav" id="sidenav-test" style="width: 22vw;">
+        <li class="valign-wrapper" style="background-color: #283593; height: 5%; padding-left: 21%;">
+            <h4 class="sidenav-head center grey-text text-lighten-5">VIDEO STREAM</h4>
+        </li>
+        <li style="background-color: #212121; height: 1%;"><a href="sass.html" class="nav_text"></a>
+        </li>
+        <li class="inside-sidebar">
+            <a href="##" class="nav_text">Senate investigates viral QC road rage case involving cyclist, ex-cop</a>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/SN-RwWXozvw?si=axFBeQ4yj4LTwnvF"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                style="margin-right: 24.75%;">
+            </iframe>
+        </li>
+        <li class="inside-sidebar">
+            <a href="##" class="nav_text">Manny Pacquiao reiterates desire to fight in Paris Olympics: It’s my dream</a>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/ejHeL3a_XZs?si=SCMxMmgarNAiBh8z"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                style="margin-right: 24.75%;">
+            </iframe>
+        </li>
+        <li class="inside-sidebar">
+            <a href="##" class="nav_text">Senate starts probe into unjust killing of Jemboy Baltazar</a>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/LJRS4j0n4s8?si=JLY-pguY16vjic68"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                style="margin-right: 24.75%;">
+            </iframe>
+        </li>
+        <li class="inside-sidebar">
+            <a href="##" class="nav_text">6 nabbed over the kidnapping of cockfight gamers in Manila</a>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/hWRLHpl19V8?si=SWUwKRtnLg5SvBWL"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                style="margin-right: 24.75%;">
+            </iframe>
+        </li>
+        <li class="inside-sidebar">
+            <a href="##" class="nav_text">Villain Dillon Brooks gets last laugh by leading Canada to historic bronze</a>
+            <iframe width="400" height="200" src="https://www.youtube.com/embed/FGLRgVCdOEw?si=PlveNIcDw97Ja7u2"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                style="margin-right: 24.75%;">
+            </iframe>
+        </li>
+    </ul>
+
+
+    </div>
+    <div class="whole-body">
+        <ul id="dropdown-apps" class="dropdown-content" style="width: 900px;">
+            <li><a class="blue darken-4 white-text" href="#">Download app for:</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#" class="black-text">
+                    <span>
+                        <h7>Android</h7>
+                    </span>
+                    <span class="material-symbols-outlined">
+                        android
+                    </span>
+                </a>
+            </li>
+            <li><a href="#" class="black-text">
+                    IOS
+                    <img src="images/apple-logo.png" style="height: 24px; width: 24px;"></img>
+                </a>
+            </li>
+            <li><a href="#" class="black-text">
+                    <span>Windows</span>
+                    <span class="material-symbols-outlined">
+                        grid_view
+                    </span>
+                </a>
+            </li>
+            <li><a href="#" class="black-text">
+                    <span>Mac</span>
+                    <span class="material-symbols-outlined">
+                        laptop_windows
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <div class="body">
+            <div class="fixed-action-btn direction-top" style="bottom: 45px; right: 24px;">
+                <a class="btn-floating btn-large red">
+                    <i class="material-icons">share</i>
+                </a>
+                <ul>
+                    <li>
+                        <a class="btn-floating blue darken-3">
+                            <img class="material-icons" src="images/facebook.png"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-floating black">
+                            <img class="" src="images/twitter.png"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-floating green darken-1">
+                            <img class="" src="images/gmail.png"></img>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn-floating blue">
+                            <img class="" src="images/messenger.png"></img>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="news-larger z-depth-1" style="  ">
+                <h1 class="headline-text grey-text text-lighten-4">JUST IN</h1>
+                <div class="divide"></div>
+                <div class="slider" style="margin-top: 0.5%;">
+                    <ul class="slides">
+                        <li class="image-container">
+                            <img class="headline_img" width="900" src="images/germany-fiba.jpg" alt="">
+
+                            <div class="caption left-align">
+                                <h1 class="headline">Germany wins FIBA 2023 World Cup</h1>
+                                <h4 class="headline headline-foot">wins 83-77 against Serbia</h4>
+                            </div>
+                            </img>
+                        </li>
+                        <li class="image-container">
+                            <img class="headline_img material-boxed"
+                                src="https://newsinfo.inquirer.net/files/2023/08/527430-e1694405629327.jpeg" alt="">
+                            <div class="caption left-align">
+                                <h1 class="headline">Sara Duterte calls criticisms vs secret fund lies; thanks backers
+                                </h1>
+                                <h4 class="headline headline-foot">Sara Duterte calls criticisms vs secret fund lies;
+                                    thanks
+                                    backers</h4>
+                            </div>
+                            </img>
+                        </li>
+                        <li class="image-container">
+                            <img class="headline_img"
+                                src="https://media.npr.org/assets/img/2023/01/18/ap23018111390882_wide-590169df8ffa2047174f822467d158a1bedec312.jpg"
+                                alt="">
+                            <div class="caption left-align">
+                                <h1 class="headline">Court clears Ressa, Rappler in last tax evasion case</h1>
+                                <h4 class="headline headline-foot">Sara Duterte calls criticisms vs secret fund lies;
+                                    thanks
+                                    backers</h4>
+                            </div>
+                            </img>
+                        </li>
+                        <li class="image-container">
+                            <img class="headline_img"
+                                src="https://globalnation.inquirer.net/files/2023/09/2023-09-13T155615Z_1_LYNXMPEJ8C0UR_RTROPTP_4_LIBYA-STORM-DERNA.jpg"
+                                alt="">
+                            <div class="caption left-align">
+                                <h1 class="headline">DFA: No request from Filipinos to leave Libya despite flooding</h1>
+                                <h4 class="headline headline-foot"> Filipinos in Libya have so far made no requests for
+                                    repatriation despite massive flooding in the North African country.</h4>
+                            </div>
+                            </img>
+                        </li>
+                        <li class="image-container">
+                            <img class="headline_img material-boxed"
+                                src="https://newsinfo.inquirer.net/files/2022/03/MRT3-North-Avenue-620x465.jpeg" alt="">
+                            <div class="caption left-align">
+                                <h1 class="headline">Fee MRT-3 rides for civil servants Sept. 18-20 – management</h1>
+                                <h4 class="headline headline-foot">Metro Rail Transit Line-3 (MRT-3) management on
+                                    Friday announced that it would offer free rides to civil servants from Sept.
+                                    18 to 20.</h4>
+                            </div>
+                            </img>
+                        </li>
+                        <li class="image-container">
+                            <img class="headline_img material-boxed"
+                                src="https://www.rappler.com/tachyon/2023/09/lpa-satellite-september-13-2023-630am.png"
+                                alt="">
+                            <div class="caption left-align">
+                                <h1 class="headline">LPA to exit PAR in next 24 hours but habagat may still bring rain
+                                </h1>
+                                <h4 class="headline headline-foot">The southwest monsoon, locally known as “habagat”
+                                    will continue to affect Southern Luzon, Visayas, and Mindanao,
+                                </h4>
+                            </div>
+                            </img>
+                        </li>
+                        <li class="image-container">
+                            <img class="headline_img material-boxed"
+                                src="https://sports.inquirer.net/files/2023/04/IMG_0247_PBA-Governors-Cup-Finals_TNT-Rondae-Holiis-Jefferson-and-Ginebra-Justin-Brownlee-620x413.jpg"
+                                alt="">
+                            <div class="caption left-align">
+                                <h1 class="headline">Gilas’ Justin Brownlee ready to to renew rivalry vs Jordan’s Rondae
+                                    Hollis-Jefferson
+                                </h1>
+                                <h4 class="headline headline-foot">There’s going to be a replay of the 2023 PBA
+                                    Governors’ Cup Finals
+                                    in Hangzhou, China. Kind of.
+                                </h4>
+                            </div>
+                            </img>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="news-smaller z-depth-1 hide-on-med-and-down">
+                <h4 class="headline-text blue darken-4 grey-text text-lighten-4">Other News</h4>
+                <div class="inside_small">
+                    <ul class="collection">
+                        <li class="collection-item">
+                            <img src="" alt="">
+                            <p>DICT: We need P300-million secret funds vs scammers</p>
+                        </li>
+                        <li class="collection-item">
+                            <p>Vivo Y27: Perfect companion for tech-savvy Filipinos</p>
+                        </li>
+                        <li class="collection-item">
+                            <p>Rice imports held off amid high global prices</p>
+                        </li>
+                        <li class="collection-item">
+                            <p>P2.4-T ‘special purpose funds’ next for scrutiny</p>
+                        </li>
+                        <li class="collection-item">
+                            <p></p>DICT: We need P300-million secret funds vs scammers
+                        </li>
+                        <li class="collection-item">
+                            <p>Vivo Y27: Perfect companion for tech-savvy Filipinos</p>
+                        </li>
+                        <li class="collection-item">
+                            <p>Rice imports held off amid high global prices</p>
+                        </li>
+                        <li class="collection-item">
+                            <p>P2.4-T ‘special purpose funds’ next for scrutiny</p>
+                        </li>
+                        <li class="collection-item">
+                            <p></p>DICT: We need P300-million secret funds vs scammers
+                        </li>
+                        <li class="collection-item">
+                            <p>Vivo Y27: Perfect companion for tech-savvy Filipinos</p>
+                        </li>
+                        <li class="collection-item">
+                            <p>Rice imports held off amid high global prices</p>
+                        </li>
+                        <li class="collection-item">
+                            <p>P2.4-T ‘special purpose funds’ next for scrutiny</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="full-news left-align container">
+        <h1 class="full-headline">Hontiveros tells Sara: I don’t need your respect, just your accountability
+            <br>
+            <h6>NATIONAL NEWS</h6>
+        </h1>
+
+        <div class="">
+            <img class="materialboxed z-depth-1" src="https://newsinfo.inquirer.net/files/2017/10/risa-sara-620x527.jpg"
+                alt="">
+            </img>
+        </div>
+        <p class="news-text"><strong>MANILA, Philippines</strong> — Opposition Senator Risa Hontiveros said she’s not
+            begging for Vice President Sara Duterte’s respect,
+            making it clear that she just wants the latter’s accountability especially in handling public funds.
+            <br><br>
+            In a statement on Thursday, Hontiveros advised Duterte to simply justify where the Office of the Vice
+            President’s funds
+            are going to rather than resort to personal attacks.
+            <br><br>
+            “If you can’t respect your co-workers, you should at least respect the spending of public money.
+            It’s been more than a week since the hearing about the confidential funds, but you have [issued more
+            attacks]
+            than explanations,” said Hontiveros in Filipino.
+            <br><br>
+            <iframe class="z-depth-1" width="560" height="315"
+                src="https://www.youtube.com/embed/2DfPOsYqaRs?si=Dzx9t6sO9O11ZPcG" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+            web-share" allowfullscreen>
+            </iframe>
+            <br><br>
+            The lawmaker likewise stressed that she’s not asking for Duterte’s respect. This comes after Duterte stated
+            that she had no respect for Hontiveros
+            and Rep. France Castro who both questioned her office’s proposed confidential funds allocation.
+            <br><br>
+            “Ang hinihingi ko sa iyo, at ng taumbayan, ay accountability. Kaya, i-account nyo na lang kung para saan ang
+            hinihingi nyong confidential funds,”
+            Hontiveros added.
+            <br><br>
+            (What I ask of you, and of the people, is accountability. So, just account for what you are requesting
+            confidential funds for.)
+            <br><br>
+            To recall, Duterte earlier admitted that her office requested a P125 million confidential budget last year.
+            This controversial budget
+            was part of the P221.4 million allocation transferred to the OVP.
+            <br><br><br>
+        </p>
+    </div>
+    <div class="full-news left-align container">
+        <h1 class="full-headline" style="margin-left:5%;">Abra gov slams killing of Abra lawyer
+            <br>
+            <h6>LOCAL NEWS</h6>
+        </h1>
+
+        <div class="">
+            <img class="materialboxed z-depth-1"
+                src="https://newsinfo.inquirer.net/files/2023/09/Lawyer-Ma.-Saniata-Liwliwa-Gonzales-Alzate-620x686.jpg"
+                alt="">
+            </img>
+        </div>
+        <p class="news-text">BAGUIO CITY — Abra Gov. Dominic Valera on Friday condemned the killing of lawyer Ma.
+            Saniata Liwliwa Gonzales Alzate, who was shot by still-unidentified assailants on Thursday afternoon,
+            <br><br>
+            In a statement, Valera described the slay as “merciless,” as he urged law enforcers to conduct a
+            “speedy and swift investigation” of the killing and the immediate resolution of the case.
+            <br><br>
+            “Let us bring these perpetrators to justice,” Valera said. He added: “Let us make a strong
+            stand against this violence that threatens our goal of a peace-loving Abra.”
+            <br><br>
+            Valera described Alzate as a “strong-willed lawyer, a defender of those in need, and a friend to many.”
+            An initial investigation by the police showed that two gunmen shot Alzate in front of her house in the
+            capital town of Bangued at 4:55 p.m.
+            The police said Alzate was parking her vehicle when she was attacked.
+            A manhunt operation was underway to capture the culprits.
+            <br><br>
+        </p>
+    </div>
+    <footer>
+        <div class="footer_ina center-align">
+            <p class="center white-text">Copyright (Dingdong ng Kahirapan) All Rights Reserve 2023</p>
+        </div>
+    </footer>
+
+
+    <!--JQuery JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $('document').ready(function () {
+            $('.slider').slider({
+                height: 580
+            });
+            $('.materialboxed').materialbox();
+            $('.sidenav').sidenav();
+            $('.dropdown-trigger').dropdown({
+                constrainWidth: false
+            });
+            $('.fixed-action-btn').floatingActionButton({
+                direction: 'left'
+            });
+        })
+    </script>
+</body>
+
+</html>

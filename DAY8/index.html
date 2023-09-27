@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Titillium+Web:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <title>Coolsbob Dent Repair</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo left">ToolsBob </a>
+                    <ul class="right">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="slider-out">
+        <div class="slider">
+            <ul class="slides">
+                <li class="image-container">
+                    <div class="caption center-align valign-wrapper">Paintless Dent Repair: Where Art Meets Automotive
+                        Science</div>
+
+                    <img class="headline_img" width="900"
+                        src="https://www.zimbrickbodyshop.com/blogs/2299/wp-content/uploads/2020/02/paintless-dent-repair-zimbrick-body-shop.jpg"
+                        alt="">
+                    </img>
+                    <div class="cover"></div>
+                </li>
+                <li class="image-container">
+                    <h1 class="caption center-align">Your Car's Second Chance: We Fix Dents Without a Trace</h1>
+                    <img class="headline_img material-boxed" src="img/DSC08476.JPG" alt="">
+                    </img>
+                    <div class="cover"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="body container">
+        <section>
+            <h2>Services offered</h2>
+        </section>
+        <div class="row center-align">
+            <div class="col center xl3 l4 m6 s6">
+                <div class="content">
+                    <img class="icon"
+                        src="https://fixedopsdigital.s3.amazonaws.com/oem/general/icons/2D2929/collision/2D2929-collision-paintless-dent-repair-icon-min.png"
+                        alt="">
+                    <h5>Dent Repair</h5>
+                </div>
+            </div>
+            <div class="col center xl3 l4 m6 s6">
+                <div class="content">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/65/65944.png" alt="">
+                    <h5>Hail Damage Repair</h5>
+                </div>
+            </div>
+            <div class="col center xl3 l4 m6 s6">
+                <div class="content">
+                    <img class="icon"
+                        src="https://fixedopsdigital.s3.amazonaws.com/oem/general/icons/2D2929/collision/2D2929-collision-dent-icon-min.png"
+                        alt="">
+                    <h5>Door Ding Removal</h5>
+                </div>
+            </div>
+            <div class="col center xl3 l4 offset-l4 m6 s6">
+                <div class="content">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3664/3664541.png" alt="">
+                    <h5>Minor Collision Repair</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider({
+                indicators: false
+            });
+            $(window).resize(function () {
+                var width = $(window).width();
+                if (width <= 767) {
+                    $('.slider').slider({
+                        height: 250,
+                        indicators: false
+                    });
+                } else {
+                    $('.slider').slider({
+                        indicators: false
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
